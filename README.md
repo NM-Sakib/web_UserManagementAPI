@@ -1,3 +1,4 @@
+```
 # User, Role, and Permission Management API
 
 This project provides a RESTful API built with Laravel for managing users, roles, and permissions. It includes user authentication via Laravel Passport and custom middleware for role-based access control. The API is designed to manage users, assign roles, and grant permissions to ensure secure access to resources.
@@ -19,7 +20,7 @@ Role-Based Access Control: Custom middleware to check user roles and permissions
 
 # SSH key for cloning the repository 
 git@github.com:NM-Sakib/web_UserManagementAPI.git
-
+```
 # Dependencies and environment files
 - composer install
 - cp .env.example .env

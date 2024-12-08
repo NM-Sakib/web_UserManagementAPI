@@ -46,7 +46,7 @@ For Passport key:
 - php artisan passport:client --personal
 - next : php artisan tinker
 ->$token = User::first()->createToken('YourAppName')->accessToken;
-
+```
 # Users API:
 
 GET   {url}/api/users
@@ -95,3 +95,4 @@ PUT  {url}/api/Permissions/{id}
         "name": "Articles only",
     }
 DELETE  {url}/api/Permissions/{id}
+```

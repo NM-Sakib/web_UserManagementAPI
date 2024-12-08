@@ -21,28 +21,30 @@ Role-Based Access Control: Custom middleware to check user roles and permissions
 git@github.com:NM-Sakib/web_UserManagementAPI.git
 
 # Dependencies and environment files
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan passport:install --api
-Add in user model :
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+- php artisan migrate
+- php artisan passport:install --api
+- Add in user model :
+```
 "use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
     use HasApiTokens;
 }"
-Seed db(optional):
-php artisan db:seed --class=RoleAndPermissionSeeder
+```
+- Seed db(optional):
+- php artisan db:seed --class=RoleAndPermissionSeeder
 
 # API test
 For Passport key:
-php artisan passport:keys
+- php artisan passport:keys
 
-Client authentication key for authorization in postman(Bearer token):
-php artisan passport:client --personal
-next : php artisan tinker
+- Client authentication key for authorization in postman(Bearer token):
+- php artisan passport:client --personal
+- next : php artisan tinker
 ->$token = User::first()->createToken('YourAppName')->accessToken;
 
 # Users API:
